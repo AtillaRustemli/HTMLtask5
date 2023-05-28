@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+}
+.rotate {
+  transform: rotateX(30deg);
+}
+.sun {
+  margin: 400px auto;
+  width: 120px;
+  height: 120px;
+  border: 2px solid white;
+  background-color: yellow;
+  border-radius: 50%;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.earth {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+
+  animation-name: earthCircle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  color: black;
+}
+
+.pluto {
+  width: 70px;
+  height: 70px;
+  border: 1px solid blue;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  animation-name: plutoCircle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes earthCircle {
+  0% {
+    transform: rotate(0deg) translate(-150px);
+  }
+  100% {
+    transform: rotate(360deg) translate(-150px);
+  }
+}
+@keyframes plutoCircle {
+  0% {
+    transform: rotate(0deg) translate(-240px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-240px) rotate(360deg);
+  }
+}
